@@ -87,32 +87,13 @@ public class ConsoleUI {
             String choice = scanner.nextLine().trim();
             try {
                 switch (choice) {
-                    case "1" -> {
-                        System.out.print("ФИО: ");
-                        String fullName = scanner.nextLine();
-                        System.out.print("Логин: ");
-                        String login = scanner.nextLine();
-                        System.out.print("Телефон: ");
-                        String phone = scanner.nextLine();
-                        User created = userService.create(fullName, login, phone);
-                        System.out.println("Создан: " + created);
-                    }
+                    case "1" -> createDispatcher();
                     case "2" -> printUsers(userService.getAll());
                     case "3" -> {
                         int id = readInt("ID: ");
                         System.out.println(userService.getById(id));
                     }
-                    case "4" -> {
-                        int id = readInt("ID диспетчера для изменения: ");
-                        System.out.print("Новое ФИО (пусто — не менять): ");
-                        String fullName = scanner.nextLine();
-                        System.out.print("Новый логин (пусто — не менять): ");
-                        String login = scanner.nextLine();
-                        System.out.print("Новый телефон (пусто — не менять): ");
-                        String phone = scanner.nextLine();
-                        userService.update(id, fullName, login, phone);
-                        System.out.println("Диспетчер обновлён.");
-                    }
+                    case "4" -> updateDispatcher();
                     case "5" -> {
                         int id = readInt("ID диспетчера для удаления: ");
                         userService.delete(id);
@@ -127,6 +108,29 @@ public class ConsoleUI {
                 System.out.println("Ошибка базы данных: " + e.getMessage());
             }
         }
+    }
+
+    private void createDispatcher() {
+        System.out.print("ФИО: ");
+        String fullName = scanner.nextLine();
+        System.out.print("Логин: ");
+        String login = scanner.nextLine();
+        System.out.print("Телефон: ");
+        String phone = scanner.nextLine();
+        User created = userService.create(fullName, login, phone);
+        System.out.println("Создан: " + created);
+    }
+
+    private void updateDispatcher() {
+        int id = readInt("ID диспетчера для изменения: ");
+        System.out.print("Новое ФИО (пусто — не менять): ");
+        String fullName = scanner.nextLine();
+        System.out.print("Новый логин (пусто — не менять): ");
+        String login = scanner.nextLine();
+        System.out.print("Новый телефон (пусто — не менять): ");
+        String phone = scanner.nextLine();
+        userService.update(id, fullName, login, phone);
+        System.out.println("Диспетчер обновлён.");
     }
 
     // Вызовы

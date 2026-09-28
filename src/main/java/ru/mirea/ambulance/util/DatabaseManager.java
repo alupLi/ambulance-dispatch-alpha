@@ -31,7 +31,9 @@ public class DatabaseManager {
 
         this.url = props.getProperty("db.url", "jdbc:postgresql://localhost:5432/ambulance");
         this.user = props.getProperty("db.user", "postgres");
-        this.password = props.getProperty("db.password", "postgres");
+        this.password = props.getProperty("db.password", "1234");
+
+        System.out.println("URL=[" + url + "] USER=[" + user + "] PASS=[" + password + "]");
     }
 
     public Connection getConnection() throws SQLException {

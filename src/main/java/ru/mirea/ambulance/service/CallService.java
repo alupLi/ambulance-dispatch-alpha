@@ -105,7 +105,7 @@ public class CallService {
         callRepository.delete(id);
     }
 
-    // ---------- Поиск ----------
+    // Поиск
 
     public List<Call> searchByPatientName(String query) {
         String needle = query.toLowerCase();
@@ -121,7 +121,7 @@ public class CallService {
                 .toList();
     }
 
-    // ---------- Фильтрация ----------
+    // Фильтрация
 
     public List<Call> filterByStatus(CallStatus status) {
         return callRepository.findAll().stream()
@@ -144,7 +144,7 @@ public class CallService {
                 .toList();
     }
 
-    // ---------- Сортировка ----------
+    // Сортировка
 
     public List<Call> sortByDateCreated() {
         return callRepository.findAll().stream()
@@ -158,7 +158,7 @@ public class CallService {
                 .toList();
     }
 
-    // ---------- Статистика ----------
+    // Статистика
 
     public CallStatistics getStatistics() {
         List<Call> all = callRepository.findAll();

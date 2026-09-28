@@ -66,4 +66,4 @@ java -jar target/ambulance-dispatch-jar-with-dependencies.jar
 - Экспорт всех вызовов в `calls_export.xlsx` (Apache POI).
 - Один интерфейс (`Repository<T>`), реализованный двумя классами — полиморфизм.
 - Свои исключения: `EntityNotFoundException`, `BusinessException`.
-- Многослойная архитектура, PreparedStatement везде, try-with-resources.
+- Многослойная архитектура, PreparedStatement везде, try-with-resources=

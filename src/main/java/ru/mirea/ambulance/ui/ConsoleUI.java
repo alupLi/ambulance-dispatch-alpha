@@ -283,9 +283,16 @@ public class ConsoleUI {
 
     private void exportMenu() {
         List<Call> calls = callService.getAll();
-        String filePath = "calls_export.xlsx";
-        excelExporter.exportCalls(calls, filePath);
-        System.out.println("Экспортировано " + calls.size() + " записей в файл: " + filePath);
+        List<User> users = userService.getAll();
+
+        String callsFilePath = "calls_export.xlsx";
+        String usersFilePath = "users_export.xlsx";
+
+        excelExporter.exportCalls(calls, callsFilePath);
+        excelExporter.exportUsers(users, usersFilePath);
+
+        System.out.println("Экспортировано " + calls.size() + " записей в файл: " + callsFilePath);
+        System.out.println("Экспортировано " + users.size() + " записей в файл: " + usersFilePath);
     }
 
     private void printRawTables() {

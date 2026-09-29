@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
- * Экспорт списка вызовов в Excel (.xlsx).
+ * Экспорт списка вызовов и списка диспетчеров в Excel (.xlsx).
  */
 public class ExcelExporter {
 

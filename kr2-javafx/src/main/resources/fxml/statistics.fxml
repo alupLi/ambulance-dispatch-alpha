@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.mirea.ambulance.controller.StatisticsController"
+      spacing="12" prefWidth="560" prefHeight="460" styleClass="root-pane">
+    <padding>
+        <Insets top="16" right="20" bottom="16" left="20"/>
+    </padding>
+
+    <Label text="Статистика вызовов" styleClass="title"/>
+
+    <TableView fx:id="statsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Показатель" prefWidth="340"/>
+            <TableColumn fx:id="valueColumn" text="Значение" prefWidth="180"/>
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+    </TableView>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Закрыть" cancelButton="true" onAction="#onClose" styleClass="primary-button"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.mirea.ambulance.controller.CallFormController"
+      spacing="12" prefWidth="520" styleClass="root-pane">
+    <padding>
+        <Insets top="16" right="20" bottom="16" left="20"/>
+    </padding>
+
+    <Label fx:id="titleLabel" styleClass="title"/>
+
+    <GridPane hgap="12" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints minWidth="110" prefWidth="120" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Диспетчер *" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="dispatcherCombo" promptText="Выберите диспетчера" maxWidth="Infinity"
+                  GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="ФИО пациента *" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="patientField" promptText="Иванов Иван Иванович"
+                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Адрес *" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="addressField" promptText="ул. Ленина, д. 5, кв. 12"
+                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Телефон" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="phoneField" promptText="+7-900-123-45-67"
+                   GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Симптомы" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextArea fx:id="symptomsArea" prefRowCount="3" wrapText="true"
+                  GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Приоритет *" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="priorityCombo" maxWidth="Infinity"
+                  GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Статус *" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="statusCombo" maxWidth="Infinity"
+                  GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Label text="* — обязательные поля" styleClass="hint-text"/>
+    <Label fx:id="errorLabel" wrapText="true" maxWidth="Infinity" styleClass="error-label"/>
+
+    <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Button fx:id="saveButton" text="Сохранить" defaultButton="true" onAction="#onSave"
+                styleClass="primary-button"/>
+        <Button text="Отмена" cancelButton="true" onAction="#onCancel" styleClass="secondary-button"/>
+    </HBox>
+</VBox>

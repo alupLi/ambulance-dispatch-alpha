@@ -1,0 +1,142 @@
+/* ===== Общие цвета и фон ===== */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-selection-bar: #bcd6ff;
+    -fx-selection-bar-non-focused: #d6e4fa;
+}
+
+.root-pane {
+    -fx-background-color: #f4f6f9;
+}
+
+/* ===== Заголовки и тексты ===== */
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+.section-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+.hint-text {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}
+
+.details-text {
+    -fx-text-fill: #111827;
+    -fx-alignment: top-left;
+}
+
+.status-bar {
+    -fx-text-fill: #6b7280;
+    -fx-font-size: 12px;
+}
+
+.error-text {
+    -fx-text-fill: #b91c1c;
+    -fx-font-weight: bold;
+}
+
+/* Сообщение об ошибке валидации в форме */
+.error-label {
+    -fx-background-color: #fdecea;
+    -fx-border-color: #f5b5b0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: #b91c1c;
+    -fx-padding: 8 10 8 10;
+}
+
+/* ===== Кнопки ===== */
+.primary-button, .secondary-button, .danger-button {
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-padding: 7 16 7 16;
+}
+
+.primary-button {
+    -fx-background-color: #c62828;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: #a71f1f;
+}
+
+.secondary-button {
+    -fx-background-color: white;
+    -fx-border-color: #cbd2d9;
+    -fx-border-radius: 5;
+    -fx-text-fill: #1f2937;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #eef1f5;
+}
+
+.danger-button {
+    -fx-background-color: white;
+    -fx-border-color: #e0a4a0;
+    -fx-border-radius: 5;
+    -fx-text-fill: #b91c1c;
+}
+
+.danger-button:hover {
+    -fx-background-color: #fdecea;
+}
+
+.primary-button:disabled, .secondary-button:disabled, .danger-button:disabled {
+    -fx-opacity: 0.45;
+}
+
+/* ===== Панели ===== */
+.filter-bar {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-border-color: #dfe3e8;
+    -fx-border-radius: 6;
+    -fx-padding: 8;
+}
+
+.details-pane {
+    -fx-background-color: white;
+    -fx-border-color: #dfe3e8 transparent transparent transparent;
+}
+
+/* ===== Формы ввода ===== */
+.text-field, .text-area, .combo-box-base, .date-picker {
+    -fx-background-radius: 4;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #c62828;
+    -fx-border-radius: 4;
+}
+
+/* ===== Таблицы ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dfe3e8;
+}
+
+.table-view .column-header .label {
+    -fx-font-weight: bold;
+}
+
+.table-row-cell.row-critical { -fx-background: #fdecea; }
+.table-row-cell.row-high     { -fx-background: #fff4e0; }
+.table-row-cell.row-closed   { -fx-background: #f1f3f5; -fx-opacity: 0.8; }
+
+.table-row-cell.row-critical:filled:selected,
+.table-row-cell.row-high:filled:selected,
+.table-row-cell.row-closed:filled:selected {
+    -fx-background: -fx-selection-bar;
+    -fx-opacity: 1;
+}

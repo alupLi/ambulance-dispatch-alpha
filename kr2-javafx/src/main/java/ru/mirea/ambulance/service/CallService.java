@@ -41,9 +41,7 @@ public class CallService {
         this.userRepository = userRepository;
     }
 
-    // ------------------------------------------------------------------
     // CRUD + бизнес-правила
-    // ------------------------------------------------------------------
 
     public Call create(Integer dispatcherId, String patientName, String address, String phone,
                        String symptoms, CallPriority priority) {
@@ -98,9 +96,7 @@ public class CallService {
         return callRepository.findAll();
     }
 
-    // ------------------------------------------------------------------
     // Поиск, фильтрация, сортировка (работает с уже загруженным списком)
-    // ------------------------------------------------------------------
 
     public List<Call> filterAndSort(List<Call> source, CallQuery query) {
         if (query.dateFrom() != null && query.dateTo() != null && query.dateFrom().isAfter(query.dateTo())) {
@@ -132,9 +128,7 @@ public class CallService {
         return value != null && value.toLowerCase().contains(needle);
     }
 
-    // ------------------------------------------------------------------
     // Статистика
-    // ------------------------------------------------------------------
 
     public List<StatRow> getStatistics() {
         List<Call> calls = callRepository.findAll();
@@ -188,9 +182,7 @@ public class CallService {
         return String.format("%d (%.0f%%)", part, percent);
     }
 
-    // ------------------------------------------------------------------
     // Валидация
-    // ------------------------------------------------------------------
 
     private void validate(Integer dispatcherId, String patientName, String address, String phone,
                           String symptoms, CallPriority priority) {

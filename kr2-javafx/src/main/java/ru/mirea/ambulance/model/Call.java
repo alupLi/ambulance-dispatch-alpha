@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 /**
- * Вызов скорой помощи — основная сущность предметной области.
+ * Вызов скорой помощи - основная сущность предметной области.
  */
 public class Call {
 

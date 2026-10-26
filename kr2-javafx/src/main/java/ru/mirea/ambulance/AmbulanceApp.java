@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * Точка входа JavaFX. Stage — окно, Scene — содержимое окна, Node — элементы внутри Scene.
+ * Точка входа JavaFX. Stage - окно, Scene - содержимое окна, Node - элементы внутри Scene.
  * Здесь собираются слои: DatabaseManager -> Repository -> Service -> Controller.
  */
 public class AmbulanceApp extends Application {

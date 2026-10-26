@@ -6,9 +6,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.Region;
 import javafx.stage.Window;
 
-/**
- * Стандартные диалоги JavaFX: ошибка, информация, подтверждение.
- */
 public final class Dialogs {
 
     private Dialogs() {

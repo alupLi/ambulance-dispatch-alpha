@@ -13,7 +13,7 @@ import java.sql.Statement;
  */
 public class PatientRepository {
 
-    /** Возвращает id пациента с таким ФИО и телефоном; если его нет — создаёт запись. */
+    /** Возвращает id пациента с таким ФИО и телефоном; если его нет - создаёт запись. */
     public int findOrCreate(Connection conn, String fullName, String phone) throws SQLException {
         String selectSql = "SELECT id FROM patients WHERE full_name = ? AND COALESCE(phone, '') = ?";
         try (PreparedStatement ps = conn.prepareStatement(selectSql)) {

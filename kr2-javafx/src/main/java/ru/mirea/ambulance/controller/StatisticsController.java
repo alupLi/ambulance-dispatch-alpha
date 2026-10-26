@@ -11,7 +11,7 @@ import ru.mirea.ambulance.service.StatRow;
 import java.util.List;
 
 /**
- * Контроллер окна статистики (statistics.fxml): таблица «показатель — значение».
+ * Контроллер окна статистики (statistics.fxml): таблица «показатель - значение».
  */
 public class StatisticsController {
 

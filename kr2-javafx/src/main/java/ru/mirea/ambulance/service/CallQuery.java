@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 /**
  * Параметры поиска, фильтрации и сортировки списка вызовов.
- * Любое поле, кроме sort, может быть null — тогда условие не применяется.
+ * Любое поле, кроме sort, может быть null - тогда условие не применяется.
  */
 public record CallQuery(String search,
                         CallStatus status,

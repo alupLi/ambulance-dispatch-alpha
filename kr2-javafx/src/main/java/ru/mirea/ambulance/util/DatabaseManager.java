@@ -11,8 +11,7 @@ import java.util.Properties;
 
 /**
  * Подключение к PostgreSQL через JDBC.
- * Параметры (url, пользователь, пароль) читаются из src/main/resources/database.properties,
- * в исходном коде паролей нет.
+ * Параметры (url, пользователь, пароль) читаются из src/main/resources/database.properties
  */
 public class DatabaseManager {
 

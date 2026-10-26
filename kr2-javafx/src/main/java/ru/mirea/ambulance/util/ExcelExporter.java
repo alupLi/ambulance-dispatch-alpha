@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Запись таблицы строк в файл Excel (.xlsx). Первая строка — заголовок.
+ * Запись таблицы строк в файл Excel (.xlsx). Первая строка - заголовок.
  */
 public class ExcelExporter {
 

@@ -132,9 +132,7 @@ public class MainController {
         refresh();
     }
 
-    // ------------------------------------------------------------------
     // Обработчики кнопок (onAction в main.fxml)
-    // ------------------------------------------------------------------
 
     @FXML
     private void onAdd() {
@@ -236,9 +234,7 @@ public class MainController {
         }
     }
 
-    // ------------------------------------------------------------------
     // Загрузка данных, фильтры, отображение
-    // ------------------------------------------------------------------
 
     private void refresh() {
         Integer keepId = selectedId();
@@ -305,9 +301,7 @@ public class MainController {
                 call.getCompletedAt() == null ? "—" : call.getCompletedAt().format(DATE_TIME)));
     }
 
-    // ------------------------------------------------------------------
     // Форма добавления / редактирования
-    // ------------------------------------------------------------------
 
     private void openForm(Call existing) {
         try {
@@ -349,9 +343,7 @@ public class MainController {
         return controller;
     }
 
-    // ------------------------------------------------------------------
     // Настройка таблицы и ComboBox
-    // ------------------------------------------------------------------
 
     private void setupColumns() {
         idColumn.setCellValueFactory(c -> new ReadOnlyObjectWrapper<>(c.getValue().getId()));
@@ -424,9 +416,7 @@ public class MainController {
         });
     }
 
-    // ------------------------------------------------------------------
     // Вспомогательные методы
-    // ------------------------------------------------------------------
 
     private String dispatcherName(Call call) {
         User dispatcher = dispatchersById.get(call.getDispatcherId());

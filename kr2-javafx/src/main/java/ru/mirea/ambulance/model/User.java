@@ -3,7 +3,7 @@ package ru.mirea.ambulance.model;
 import java.util.Objects;
 
 /**
- * Пользователь системы — диспетчер, принимающий вызовы.
+ * Пользователь системы - диспетчер, принимающий вызовы.
  */
 public class User {
 
